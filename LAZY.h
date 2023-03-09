@@ -3,10 +3,56 @@
 
 #include <stdio.h>
 #include <stdint-gcc.h>
+#include <stddef.h>
 #include <stdint.h>
 
 //LAZY is a project by CoffeeBrewer64 for simplifying software development, especially around emulation.
 //This version: 0.0.1
+
+/***
+===
+
+SIZES
+
+These are done in BYTES, NOT bits.
+
+===
+***/
+
+
+#define LAZY_sizes_256Bytes (0x100)
+#define LAZY_sizes_512Bytes (0x200)
+#define LAZY_sizes_1KiB (0x400)
+#define LAZY_sizes_2KiB (0x800)
+#define LAZY_sizes_4KiB (0x1000)
+#define LAZY_sizes_8KiB (0x2000)
+#define LAZY_sizes_16KiB (0x4000)
+#define LAZY_sizes_32KiB (0x8000)
+#define LAZY_sizes_64KiB  (0x10000)
+#define LAZY_sizes_128KiB (0x20000)
+#define LAZY_sizes_256KiB (0x40000)
+#define LAZY_sizes_512KiB (0x80000)
+#define LAZY_sizes_1MiB   (0x100000)
+#define LAZY_sizes_2MiB   (0x200000)
+#define LAZY_sizes_4MiB   (0x400000)
+#define LAZY_sizes_6MiB   (0x600000)
+#define LAZY_sizes_8MiB   (0x800000)
+#define LAZY_sizes_16MiB  (0x1000000)
+#define LAZY_sizes_32MiB  (0x2000000)
+#define LAZY_sizes_64MiB  (0x4000000)
+#define LAZY_sizes_128MiB (0x8000000)
+#define LAZY_sizes_256MiB (0x10000000)
+#define LAZY_sizes_512MiB (0x20000000)
+#define LAZY_sizes_1GiB   (0x40000000)
+#define LAZY_sizes_2GiB   (0x80000000)
+#define LAZY_sizes_4GiB   (0x100000000LL)
+#define LAZY_sizes_6GiB  (0x400000000LL)
+#define LAZY_sizes_8GiB   (0x200000000LL)
+#define LAZY_sizes_32GiB  (0x800000000LL)
+
+
+
+
 
 typedef struct
 {
@@ -113,8 +159,11 @@ typedef struct
     unsigned int fivefive;
 } LAZY_types_block5by5;
 
-
-
+LAZY_types_block1by5 LAZY_dummy_block1by5;
+LAZY_types_block2by5 LAZY_dummy_block2by5;
+LAZY_types_block3by5 LAZY_dummy_block3by5;
+LAZY_types_block4by5 LAZY_dummy_block4by5;
+LAZY_types_block5by5 LAZY_dummy_block5by5;
 
 
 
