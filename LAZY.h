@@ -9,6 +9,11 @@
 //LAZY is a project by CoffeeBrewer64 for simplifying software development, especially around emulation.
 //This version: 0.0.1
 
+double LAZY_maths_pi = 3.14159;
+double LAZY_maths_piAccurate = 3.141592653589793; //https://www.piday.org/million/
+double LAZY_maths_pi100 = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679; //https://math.tools/numbers/pi/100
+double LAZY_maths_pi1000 = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989; //https://math.tools/numbers/pi/100
+
 /***
 ===
 
@@ -315,7 +320,52 @@ Below are some functions for maths, if you somehow forgot how to use the + sign 
 
 ***/
 
+/** LAZY_maths_radius **/
 
+int LAZY_maths_radiusInt(int diameter)
+{
+    int ans = diameter / 2;
+    return ans;
+}
+
+float LAZY_maths_radiusFloat(float diameter)
+{
+    float ans = diameter / 2;
+    return ans;
+}
+
+double LAZY_maths_radiusDouble(double diameter)
+{
+    double ans = diameter / 2;
+    return ans;
+}
+
+// TODO: Radius from area
+// TODO: Circumference to area
+// TODO: circle area from diameter
+
+/** LAZY_maths_circleArea_TYPE_radius **/
+
+int LAZY_maths_circleAreaInt_radius(int radius)
+{
+    int dia = radius * 2;
+    int ans = LAZY_maths_piAccurate * dia;
+    return ans;
+}
+
+float LAZY_maths_circleAreaFloat_radius(float radius)
+{
+    float dia = radius * 2;
+    float ans = LAZY_maths_piAccurate * dia;
+    return ans;
+}
+
+double LAZY_maths_circleAreaDouble_radius(double radius)
+{
+    double dia = radius * 2;
+    double ans = LAZY_maths_piAccurate * dia;
+    return ans;
+}
 
 /** LAZY_maths_inverseSquareRoot (and accurate version) **/
 
