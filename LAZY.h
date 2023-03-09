@@ -10,108 +10,112 @@
 
 typedef struct
 {
-    unsigned char oneone;
-    unsigned char onetwo;
-    unsigned char onethree;
-    unsigned char onefour;
-    unsigned char onefive;
+    unsigned int oneone;
+    unsigned int onetwo;
+    unsigned int onethree;
+    unsigned int onefour;
+    unsigned int onefive;
 } LAZY_types_block1by5;
 
 typedef struct
 {
-    unsigned char oneone;
-    unsigned char onetwo;
-    unsigned char onethree;
-    unsigned char onefour;
-    unsigned char onefive;
+    unsigned int oneone;
+    unsigned int onetwo;
+    unsigned int onethree;
+    unsigned int onefour;
+    unsigned int onefive;
 
-    unsigned char twoone;
-    unsigned char twotwo;
-    unsigned char twothree;
-    unsigned char twofour;
-    unsigned char twofive;
+    unsigned int twoone;
+    unsigned int twotwo;
+    unsigned int twothree;
+    unsigned int twofour;
+    unsigned int twofive;
 } LAZY_types_block2by5;
 
 typedef struct
 {
-    unsigned char oneone;
-    unsigned char onetwo;
-    unsigned char onethree;
-    unsigned char onefour;
-    unsigned char onefive;
+    unsigned int oneone;
+    unsigned int onetwo;
+    unsigned int onethree;
+    unsigned int onefour;
+    unsigned int onefive;
 
-    unsigned char twoone;
-    unsigned char twotwo;
-    unsigned char twothree;
-    unsigned char twofour;
-    unsigned char twofive;
+    unsigned int twoone;
+    unsigned int twotwo;
+    unsigned int twothree;
+    unsigned int twofour;
+    unsigned int twofive;
 
-    unsigned char threeone;
-    unsigned char threetwo;
-    unsigned char threethree;
-    unsigned char threefour;
-    unsigned char threefive;
+    unsigned int threeone;
+    unsigned int threetwo;
+    unsigned int threethree;
+    unsigned int threefour;
+    unsigned int threefive;
 } LAZY_types_block3by5;
 
 typedef struct
 {
-    unsigned char oneone;
-    unsigned char onetwo;
-    unsigned char onethree;
-    unsigned char onefour;
-    unsigned char onefive;
+    unsigned int oneone;
+    unsigned int onetwo;
+    unsigned int onethree;
+    unsigned int onefour;
+    unsigned int onefive;
 
-    unsigned char twoone;
-    unsigned char twotwo;
-    unsigned char twothree;
-    unsigned char twofour;
-    unsigned char twofive;
+    unsigned int twoone;
+    unsigned int twotwo;
+    unsigned int twothree;
+    unsigned int twofour;
+    unsigned int twofive;
 
-    unsigned char threeone;
-    unsigned char threetwo;
-    unsigned char threethree;
-    unsigned char threefour;
-    unsigned char threefive;
+    unsigned int threeone;
+    unsigned int threetwo;
+    unsigned int threethree;
+    unsigned int threefour;
+    unsigned int threefive;
 
-    unsigned char fourone;
-    unsigned char fourtwo;
-    unsigned char fourthree;
-    unsigned char fourfour;
-    unsigned char fourfive;
+    unsigned int fourone;
+    unsigned int fourtwo;
+    unsigned int fourthree;
+    unsigned int fourfour;
+    unsigned int fourfive;
 } LAZY_types_block4by5;
 
 typedef struct
 {
-    unsigned char oneone;
-    unsigned char onetwo;
-    unsigned char onethree;
-    unsigned char onefour;
-    unsigned char onefive;
+    unsigned int oneone;
+    unsigned int onetwo;
+    unsigned int onethree;
+    unsigned int onefour;
+    unsigned int onefive;
 
-    unsigned char twoone;
-    unsigned char twotwo;
-    unsigned char twothree;
-    unsigned char twofour;
-    unsigned char twofive;
+    unsigned int twoone;
+    unsigned int twotwo;
+    unsigned int twothree;
+    unsigned int twofour;
+    unsigned int twofive;
 
-    unsigned char threeone;
-    unsigned char threetwo;
-    unsigned char threethree;
-    unsigned char threefour;
-    unsigned char threefive;
+    unsigned int threeone;
+    unsigned int threetwo;
+    unsigned int threethree;
+    unsigned int threefour;
+    unsigned int threefive;
 
-    unsigned char fourone;
-    unsigned char fourtwo;
-    unsigned char fourthree;
-    unsigned char fourfour;
-    unsigned char fourfive;
+    unsigned int fourone;
+    unsigned int fourtwo;
+    unsigned int fourthree;
+    unsigned int fourfour;
+    unsigned int fourfive;
 
-    unsigned char fiveone;
-    unsigned char fivetwo;
-    unsigned char fivethree;
-    unsigned char fivefour;
-    unsigned char fivefive;
+    unsigned int fiveone;
+    unsigned int fivetwo;
+    unsigned int fivethree;
+    unsigned int fivefour;
+    unsigned int fivefive;
 } LAZY_types_block5by5;
+
+
+
+
 
 
 /***
@@ -156,6 +160,29 @@ float LAZY_maths_accurateInverseSquareRoot(float number) //taken from the Quake 
   return y;
 }
 
+/** LAZY_maths_percentage **/
+
+int LAZY_maths_percentageInt(int num, int outOf)
+{
+    int ans1 = num / outOf;
+    int ansf = ans1 * 100; //ansf = answer final
+    return ansf;
+}
+
+double LAZY_maths_percentageDouble(double num, double outOf)
+{
+    double ans1 = num / outOf;
+    double ansf = ans1 * 100; //ansf = answer final
+    return ansf;
+}
+
+float LAZY_maths_percentageFloat(float num, float outOf)
+{
+    float ans1 = num / outOf;
+    float ansf = ans1 * 100; //ansf = answer final
+    return ansf;
+}
+
 /** LAZY_maths_cube **/
 
 int LAZY_maths_cubeInt(int number)
@@ -175,7 +202,6 @@ double LAZY_maths_cubeDouble(double number)
     double ans = number * number * number;
     return ans;
 }
-
 
 
 /** LAZY_maths_square **/
