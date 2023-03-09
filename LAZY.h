@@ -156,6 +156,48 @@ float LAZY_maths_accurateInverseSquareRoot(float number) //taken from the Quake 
   return y;
 }
 
+/** LAZY_maths_cube **/
+
+int LAZY_maths_cubeInt(int number)
+{
+    int ans = number * number * number;
+    return ans;
+}
+
+float LAZY_maths_cubeFloat(float number)
+{
+    float ans = number * number * number;
+    return ans;
+}
+
+double LAZY_maths_cubeDouble(double number)
+{
+    double ans = number * number * number;
+    return ans;
+}
+
+
+
+/** LAZY_maths_square **/
+
+int LAZY_maths_squareInt(int number)
+{
+    int ans = number * number;
+    return ans;
+}
+
+float LAZY_maths_squareFloat(float number)
+{
+    float ans = number * number;
+    return ans;
+}
+
+double LAZY_maths_squareDouble(double number)
+{
+    double ans = number * number;
+    return ans;
+}
+
 /** LAZY_maths_add **/
 
 int LAZY_maths_addInt(int num1, int num2)
