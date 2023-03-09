@@ -50,8 +50,148 @@ These are done in BYTES, NOT bits.
 #define LAZY_sizes_8GiB   (0x200000000LL)
 #define LAZY_sizes_32GiB  (0x800000000LL)
 
+typedef int8_t lInt8;
+typedef uint8_t lUint8;
+typedef int16_t lInt16;
+typedef uint16_t lUint16;
+typedef int32_t lInt32;
+typedef uint32_t lUint32;
+typedef int64_t lInt64;
+typedef uint64_t lUint64;
+typedef void lVoid;
+typedef void *lPVoid;
+
+typedef char* lName;
+
+typedef struct lIntVector2
+{
+    int x;
+    int y;
+} lIntVector2;
+
+typedef struct lFloatVector2
+{
+    float x;
+    float y;
+} lFloatVector2;
+
+typedef struct lIntVector3
+{
+    int x;
+    int y;
+    int z;
+} lIntVector3;
+
+typedef struct lFloatVector3
+{
+    float x;
+    float y;
+    float z;
+} lFloatVector3;
+
+typedef struct lIntVector4
+{
+    int x;
+    int y;
+    int z;
+    int w;
+} lIntVector4;
+
+typedef struct lFloatVector4
+{
+    float x;
+    float y;
+    float z;
+    float w;
+} lFloatVector4;
+
+typedef struct lIntMatrix2
+{
+    lIntVector2 x;
+    lIntVector2 y;
+} lIntMatrix2;
+
+typedef struct lFloatMatrix2
+{
+    lFloatVector2 x;
+    lFloatVector2 y;
+} lFloatMatrix2;
+
+typedef struct lIntMatrix3
+{
+    lIntVector3 x;
+    lIntVector3 y;
+    lIntVector3 z;
+} lIntMatrix3;
+
+typedef struct lFloatMatrix3
+{
+    lFloatVector3 x;
+    lFloatVector3 y;
+    lFloatVector3 z;
+} lFloatMatrix3;
+
+typedef struct lIntMatrix4
+{
+    lIntVector4 x;
+    lIntVector4 y;
+    lIntVector4 z;
+    lIntVector4 w;
+} lIntMatrix4;
+
+typedef struct lFloatMatrix4
+{
+    lFloatVector4 x;
+    lFloatVector4 y;
+    lFloatVector4 z;
+    lFloatVector4 w;
+} lFloatMatrix4;
+
+typedef struct lFloatQuaternion
+{
+    float x;
+    float y;
+    float z;
+    float w;
+} lFloatQuaternion;
+
+typedef struct lFloatColor
+{
+    float r;
+    float g;
+    float b;
+    float a;
+} lFloatColor;
+
+typedef struct lFloatPlane
+{
+    float a;
+    float b;
+    float c;
+    float d;
+} lFloatPlane;
+
+typedef struct lDateTime
+{
+    unsigned short year;
+    unsigned short month;
+    unsigned short day;
+    unsigned short hour;
+    unsigned short minute;
+    unsigned short second;
+    unsigned int microsecond;
+} lDateTime;
 
 
+/***
+===
+
+BLOCKS
+
+These are pieces of data containing ints which can be used for storing data and shifting that data along.
+
+===
+***/
 
 
 typedef struct
