@@ -9,6 +9,14 @@
 //LAZY is a project by CoffeeBrewer64 for simplifying software development, especially around emulation.
 //This version: 0.0.1
 
+/** SETTINGS **/
+
+int LAZY_config_doPiAccurateTo1000 = 1; //if 1, all pi calculations will be done using LAZY_maths_pi1000
+
+
+
+
+
 double LAZY_maths_pi = 3.14159;
 double LAZY_maths_piAccurate = 3.141592653589793; //https://www.piday.org/million/
 double LAZY_maths_pi100 = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679; //https://math.tools/numbers/pi/100
@@ -63,6 +71,7 @@ typedef int32_t lInt32;
 typedef uint32_t lUint32;
 typedef int64_t lInt64;
 typedef uint64_t lUint64;
+typedef uintmax_t lUintMax; //usually 64 or 32.
 typedef void lVoid;
 typedef void *lPVoid;
 
@@ -344,26 +353,82 @@ double LAZY_maths_radiusDouble(double diameter)
 // TODO: Circumference to area
 // TODO: circle area from diameter
 
+/** LAZY_maths_circumference **/
+
+double LAZY_maths_circumference_radius(double radius)
+{
+    double ans;
+    double dia;
+    dia = radius + radius;
+    if (LAZY_config_doPiAccurateTo1000 == 1)
+    {
+        ans = dia * LAZY_maths_pi1000;
+    }
+    else
+    {
+        ans = dia * LAZY_maths_pi;
+    }
+    return ans;
+}
+
+double LAZY_maths_circumference_diameter(double diameter)
+{
+    double ans;
+    if (LAZY_config_doPiAccurateTo1000 == 1)
+    {
+        ans = diameter * LAZY_maths_pi1000;
+    }
+    else
+    {
+        ans = diameter * LAZY_maths_pi;
+    }
+    return ans;
+}
+
 /** LAZY_maths_circleArea_TYPE_radius **/
 
 int LAZY_maths_circleAreaInt_radius(int radius)
 {
+    int ans;
     int dia = radius * 2;
-    int ans = LAZY_maths_piAccurate * dia;
+    if (LAZY_config_doPiAccurateTo1000 == 1)
+    {
+        ans = LAZY_maths_pi1000 * dia;
+    }
+    else
+    {
+        int ans = LAZY_maths_pi * dia;
+    }
     return ans;
 }
 
 float LAZY_maths_circleAreaFloat_radius(float radius)
 {
+    float ans;
     float dia = radius * 2;
-    float ans = LAZY_maths_piAccurate * dia;
+    if (LAZY_config_doPiAccurateTo1000 == 1)
+    {
+        ans = LAZY_maths_pi * dia;
+    }
+    else
+    {
+        ans = LAZY_maths_piAccurate * dia;
+    }
     return ans;
 }
 
 double LAZY_maths_circleAreaDouble_radius(double radius)
 {
     double dia = radius * 2;
-    double ans = LAZY_maths_piAccurate * dia;
+    double ans;
+    if (LAZY_config_doPiAccurateTo1000 == 1)
+    {
+        ans = LAZY_maths_pi * dia;
+    }
+    else
+    {
+        ans = LAZY_maths_pi * dia;
+    }
     return ans;
 }
 
